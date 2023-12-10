@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sektor-специалист-e",
+  "editForm": "i-i-s-sektor-специалист-e",
+  "external": false,
+  "caption": "Специалист",
+  "name": "IISSektorСпециалистL",
+  "className": "СпециалистL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sektor-специалист",
+      "modelProjection": "СпециалистL"
+    }
+  ]
+}

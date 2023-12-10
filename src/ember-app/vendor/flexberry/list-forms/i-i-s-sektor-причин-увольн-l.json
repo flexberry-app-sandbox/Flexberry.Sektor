@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sektor-причин-увольн-e",
+  "editForm": "i-i-s-sektor-причин-увольн-e",
+  "external": false,
+  "caption": "Причин увольн",
+  "name": "IISSektorПричинУвольнL",
+  "className": "ПричинУвольнL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sektor-причин-увольн",
+      "modelProjection": "ПричинУвольнL"
+    }
+  ]
+}

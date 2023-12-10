@@ -1,0 +1,44 @@
+﻿{
+  "applicationCaption": "Sektor",
+  "applicationTitle": "Sektor",
+  "items": [
+    {
+      "link": null,
+      "menuName": "увольнение",
+      "caption": "Увольнение",
+      "title": "Увольнение",
+      "children": [
+        {
+          "link": "i-i-s-sektor-анкеты-l",
+          "menuName": null,
+          "caption": "Анкеты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sektor-причин-увольн-l",
+          "menuName": null,
+          "caption": "Причин увольн",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "кадры",
+      "caption": "Кадры",
+      "title": "Кадры",
+      "children": [
+        {
+          "link": "i-i-s-sektor-специалист-l",
+          "menuName": null,
+          "caption": "Специалист",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

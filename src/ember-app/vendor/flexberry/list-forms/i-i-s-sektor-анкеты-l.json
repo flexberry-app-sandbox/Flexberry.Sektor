@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sektor-анкеты-e",
+  "editForm": "i-i-s-sektor-анкеты-e",
+  "external": false,
+  "caption": "Анкеты",
+  "name": "IISSektorАнкетыL",
+  "className": "АнкетыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sektor-анкеты",
+      "modelProjection": "АнкетыL"
+    }
+  ]
+}

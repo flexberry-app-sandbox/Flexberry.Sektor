@@ -1,0 +1,119 @@
+﻿{
+  "name": "IISSektorПричинУвольн",
+  "modelName": "i-i-s-sektor-причин-увольн",
+  "className": "ПричинУвольн",
+  "nameSpace": "IIS.Sektor",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаЗаполн",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "причУвольн",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "специалист",
+      "relatedTo": "i-i-s-sektor-специалист",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "рекомендации",
+      "relatedTo": "i-i-s-sektor-рекомендац",
+      "inverse": "причинУвольн"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПричинУвольнE",
+      "modelName": "i-i-s-sektor-причин-увольн",
+      "attrs": [
+        {
+          "name": "датаЗаполн",
+          "caption": "Дата заполнения",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "причУвольн",
+          "caption": "Причина увольнения",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Специалист",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "специалист",
+          "relatedTo": "i-i-s-sektor-специалист",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "РекомендацE",
+          "caption": "Рекомендации",
+          "name": "рекомендации",
+          "relatedTo": "i-i-s-sektor-рекомендац",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПричинУвольнL",
+      "modelName": "i-i-s-sektor-причин-увольн",
+      "attrs": [
+        {
+          "name": "датаЗаполн",
+          "caption": "Дата заполн",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "причУвольн",
+          "caption": "Прич увольн",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

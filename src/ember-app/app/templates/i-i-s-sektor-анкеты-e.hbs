@@ -1,0 +1,248 @@
+<h3 class="ui header">{{t "forms.i-i-s-sektor-анкеты-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sektor-анкеты-e.датаЗаполн-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаЗаполн
+      class=(if (v-get validationModel "датаЗаполн" "isInvalid") "error")
+      data-test-i-i-s-sektor-анкеты-e-датаЗаполн=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаЗаполн" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.взаимСРуковод
+      class=(if (v-get validationModel "взаимСРуковод" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.взаимСРуковод-caption")
+      data-test-i-i-s-sektor-анкеты-e-взаимСРуковод=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "взаимСРуковод" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.взаимCКоллег
+      class=(if (v-get validationModel "взаимCКоллег" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.взаимCКоллег-caption")
+      data-test-i-i-s-sektor-анкеты-e-взаимCКоллег=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "взаимCКоллег" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.санитГигиен
+      class=(if (v-get validationModel "санитГигиен" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.санитГигиен-caption")
+      data-test-i-i-s-sektor-анкеты-e-санитГигиен=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "санитГигиен" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.снабжНеобхИнстр
+      class=(if (v-get validationModel "снабжНеобхИнстр" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.снабжНеобхИнстр-caption")
+      data-test-i-i-s-sektor-анкеты-e-снабжНеобхИнстр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "снабжНеобхИнстр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.интенсРаботы
+      class=(if (v-get validationModel "интенсРаботы" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.интенсРаботы-caption")
+      data-test-i-i-s-sektor-анкеты-e-интенсРаботы=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "интенсРаботы" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.информСотруд
+      class=(if (v-get validationModel "информСотруд" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.информСотруд-caption")
+      data-test-i-i-s-sektor-анкеты-e-информСотруд=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "информСотруд" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.размЗарабПлат
+      class=(if (v-get validationModel "размЗарабПлат" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.размЗарабПлат-caption")
+      data-test-i-i-s-sektor-анкеты-e-размЗарабПлат=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "размЗарабПлат" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.системПремир
+      class=(if (v-get validationModel "системПремир" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.системПремир-caption")
+      data-test-i-i-s-sektor-анкеты-e-системПремир=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "системПремир" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.системЛьгот
+      class=(if (v-get validationModel "системЛьгот" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.системЛьгот-caption")
+      data-test-i-i-s-sektor-анкеты-e-системЛьгот=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "системЛьгот" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.офицПризЗасл
+      class=(if (v-get validationModel "офицПризЗасл" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.офицПризЗасл-caption")
+      data-test-i-i-s-sektor-анкеты-e-офицПризЗасл=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "офицПризЗасл" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.карьерРоста
+      class=(if (v-get validationModel "карьерРоста" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.карьерРоста-caption")
+      data-test-i-i-s-sektor-анкеты-e-карьерРоста=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "карьерРоста" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.системОбучен
+      class=(if (v-get validationModel "системОбучен" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.системОбучен-caption")
+      data-test-i-i-s-sektor-анкеты-e-системОбучен=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "системОбучен" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.системАдаптац
+      class=(if (v-get validationModel "системАдаптац" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.системАдаптац-caption")
+      data-test-i-i-s-sektor-анкеты-e-системАдаптац=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "системАдаптац" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.содержРабот
+      class=(if (v-get validationModel "содержРабот" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.содержРабот-caption")
+      data-test-i-i-s-sektor-анкеты-e-содержРабот=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "содержРабот" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.органРабочПроц
+      class=(if (v-get validationModel "органРабочПроц" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.органРабочПроц-caption")
+      data-test-i-i-s-sektor-анкеты-e-органРабочПроц=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "органРабочПроц" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.престиж
+      class=(if (v-get validationModel "престиж" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.престиж-caption")
+      data-test-i-i-s-sektor-анкеты-e-престиж=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "престиж" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.оценивРабот
+      class=(if (v-get validationModel "оценивРабот" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.оценивРабот-caption")
+      data-test-i-i-s-sektor-анкеты-e-оценивРабот=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оценивРабот" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-sektor-анкеты-e-относКатСотр="true">
+    <label>{{t "forms.i-i-s-sektor-анкеты-e.относКатСотр-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-sektor-катег-сотруд")
+      value=model.относКатСотр
+      class=(if (v-get validationModel "относКатСотр" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "относКатСотр" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-sektor-анкеты-e-какойСтаж="true">
+    <label>{{t "forms.i-i-s-sektor-анкеты-e.какойСтаж-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-sektor-стаж")
+      value=model.какойСтаж
+      class=(if (v-get validationModel "какойСтаж" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "какойСтаж" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-sektor-анкеты-e-возрастСотруд="true">
+    <label>{{t "forms.i-i-s-sektor-анкеты-e.возрастСотруд-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-sektor-возраст")
+      value=model.возрастСотруд
+      class=(if (v-get validationModel "возрастСотруд" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "возрастСотруд" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.коммент
+      class=(if (v-get validationModel "коммент" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-анкеты-e.коммент-caption")
+      data-test-i-i-s-sektor-анкеты-e-коммент=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "коммент" "message")}}
+  </div>
+</form>

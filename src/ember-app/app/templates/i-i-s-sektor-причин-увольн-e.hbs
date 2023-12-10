@@ -1,0 +1,72 @@
+<h3 class="ui header">{{t "forms.i-i-s-sektor-причин-увольн-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sektor-причин-увольн-e.датаЗаполн-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаЗаполн
+      class=(if (v-get validationModel "датаЗаполн" "isInvalid") "error")
+      data-test-i-i-s-sektor-причин-увольн-e-датаЗаполн=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаЗаполн" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.специалист.фИО
+      class=(if (v-get validationModel.специалист "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-причин-увольн-e.специалист.фИО-caption")
+      data-test-i-i-s-sektor-причин-увольн-e-специалист-фИО=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.специалист "фИО" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.причУвольн
+      class=(if (v-get validationModel "причУвольн" "isInvalid") "error")
+      label=(t "forms.i-i-s-sektor-причин-увольн-e.причУвольн-caption")
+      data-test-i-i-s-sektor-причин-увольн-e-причУвольн=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "причУвольн" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sektor-причин-увольн-e.рекомендации-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="рекомендацииGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.рекомендации
+      content=model.рекомендации
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "рекомендации" "isInvalid") "error")
+      data-test-i-i-s-sektor-причин-увольн-e-рекомендации=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "рекомендации" "message")}}
+  </div>
+</form>

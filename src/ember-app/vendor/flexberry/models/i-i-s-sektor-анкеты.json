@@ -1,0 +1,488 @@
+﻿{
+  "name": "IISSektorАнкеты",
+  "modelName": "i-i-s-sektor-анкеты",
+  "className": "Анкеты",
+  "nameSpace": "IIS.Sektor",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "взаимCКоллег",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "взаимСРуковод",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "возрастСотруд",
+      "type": "i-i-s-sektor-возраст",
+      "flexberryType": "Возраст",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаЗаполн",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "интенсРаботы",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "информСотруд",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "какойСтаж",
+      "type": "i-i-s-sektor-стаж",
+      "flexberryType": "Стаж",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "карьерРоста",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "коммент",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "органРабочПроц",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "относКатСотр",
+      "type": "i-i-s-sektor-катег-сотруд",
+      "flexberryType": "КатегСотруд",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "офицПризЗасл",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "оценивРабот",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "престиж",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "размЗарабПлат",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "результРабот",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "санитГигиен",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "системАдаптац",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "системЛьгот",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "системОбучен",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "системПремир",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "снабжНеобхИнстр",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "содержРабот",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "специалист",
+      "relatedTo": "i-i-s-sektor-специалист",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "АнкетыE",
+      "modelName": "i-i-s-sektor-анкеты",
+      "attrs": [
+        {
+          "name": "датаЗаполн",
+          "caption": "Дата заполнения",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "взаимСРуковод",
+          "caption": "Взаимоотношения с руководителем",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "взаимCКоллег",
+          "caption": "Взаимоотношения с коллегами",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "санитГигиен",
+          "caption": "Санитарно-гигиенические условия",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "снабжНеобхИнстр",
+          "caption": "Снабжение необходимыми инструментами",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "интенсРаботы",
+          "caption": "Интенсивность работы",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "информСотруд",
+          "caption": "Информированность сотрудников",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "размЗарабПлат",
+          "caption": "Размер заработной платы",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "системПремир",
+          "caption": "Система премирования",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "системЛьгот",
+          "caption": "Система льгот, компенсаций",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "офицПризЗасл",
+          "caption": "Система официального признания заслуг",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "карьерРоста",
+          "caption": "Перспективы карьерного роста",
+          "hidden": false,
+          "index": 11
+        },
+        {
+          "name": "системОбучен",
+          "caption": "Система обучения и профессионального развития",
+          "hidden": false,
+          "index": 12
+        },
+        {
+          "name": "системАдаптац",
+          "caption": "Система адаптации и наставничества",
+          "hidden": false,
+          "index": 13
+        },
+        {
+          "name": "содержРабот",
+          "caption": "Содержание работы",
+          "hidden": false,
+          "index": 14
+        },
+        {
+          "name": "органРабочПроц",
+          "caption": "Организация рабочего процесса",
+          "hidden": false,
+          "index": 15
+        },
+        {
+          "name": "престиж",
+          "caption": "Престижность ПАО «Россети Сибирь»",
+          "hidden": false,
+          "index": 16
+        },
+        {
+          "name": "оценивРабот",
+          "caption": "Оцениваете работу в ПАО «Россети Сибирь»",
+          "hidden": false,
+          "index": 17
+        },
+        {
+          "name": "относКатСотр",
+          "caption": "Категория сотрудников",
+          "hidden": false,
+          "index": 18
+        },
+        {
+          "name": "какойСтаж",
+          "caption": "Стаж",
+          "hidden": false,
+          "index": 19
+        },
+        {
+          "name": "возрастСотруд",
+          "caption": "Возраст сотрудника",
+          "hidden": false,
+          "index": 20
+        },
+        {
+          "name": "коммент",
+          "caption": "Комментарии уволившегося сотрудника",
+          "hidden": false,
+          "index": 21
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "АнкетыL",
+      "modelName": "i-i-s-sektor-анкеты",
+      "attrs": [
+        {
+          "name": "датаЗаполн",
+          "caption": "Дата заполн",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "системЛьгот",
+          "caption": "Систем льгот",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "системПремир",
+          "caption": "Систем премир",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "содержРабот",
+          "caption": "Содерж работ",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "взаимСРуковод",
+          "caption": "Взаим с руковод",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "информСотруд",
+          "caption": "Информ сотруд",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "размЗарабПлат",
+          "caption": "Разм зараб плат",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "органРабочПроц",
+          "caption": "Орган рабоч проц",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "оценивРабот",
+          "caption": "Оценив работ",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "результРабот",
+          "caption": "Результ работ",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "системАдаптац",
+          "caption": "Систем адаптац",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "интенсРаботы",
+          "caption": "Интенс работы",
+          "hidden": false,
+          "index": 11
+        },
+        {
+          "name": "взаимCКоллег",
+          "caption": "Взаим c коллег",
+          "hidden": false,
+          "index": 12
+        },
+        {
+          "name": "системОбучен",
+          "caption": "Систем обучен",
+          "hidden": false,
+          "index": 13
+        },
+        {
+          "name": "престиж",
+          "caption": "Престиж",
+          "hidden": false,
+          "index": 14
+        },
+        {
+          "name": "снабжНеобхИнстр",
+          "caption": "Снабж необх инстр",
+          "hidden": false,
+          "index": 15
+        },
+        {
+          "name": "какойСтаж",
+          "caption": "Какой стаж",
+          "hidden": false,
+          "index": 16
+        },
+        {
+          "name": "возрастСотруд",
+          "caption": "Возраст сотруд",
+          "hidden": false,
+          "index": 17
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

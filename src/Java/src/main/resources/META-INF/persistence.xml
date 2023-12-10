@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Olingo4PG">
+        <class>Sektor.model.Rekomendac</class>
+        <class>Sektor.model.Ankety</class>
+        <class>Sektor.model.PrichinUvoln</class>
+        <class>Sektor.model.Specialist</class>
+        <class>Sektor.model.FlexberryAdvLimit</class>
+        <class>Sektor.model.NewPlatformFlexberryFlexberryUserSetting</class>
+        <class>Sektor.model.NewPlatformFlexberryServicesLock</class>
+        <class>Sektor.model.IISCaseberryLoggingObjectsApplicationLog</class>
+
+    </persistence-unit>
+</persistence>
